@@ -1,2 +1,380 @@
-@import "ressets.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap");
 @import "variables.scss";
+@import "ressets.scss";
+
+a {
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+    color: $color_main_hover;
+
+    i {
+      color: $color_main_hover;
+    }
+  }
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.logo {
+  font-size: 40px;
+  font-family: $font_second;
+  line-height: 1;
+}
+
+.image-container {
+  display: block;
+  overflow: hidden;
+
+  img {
+    transition: transform 2s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $button_height;
+  width: 200px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: $button_height;
+  border: 3px solid $color_main;
+  text-transform: uppercase;
+  margin: 50px auto;
+
+  &:hover {
+    border-color: $color_main_hover;
+  }
+  &:active {
+    font-size: 17px;
+  }
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.nav {
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  display: flex;
+  height: $nav_height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+  }
+  &__contact &__link {
+    line-height: 25px;
+    text-transform: none;
+    font-size: 18px;
+  }
+  &__link {
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0 15px;
+    line-height: $nav_height;
+    cursor: pointer;
+
+    &:hover {
+      color: $color_main_hover;
+    }
+  }
+  &__button {
+    margin: 0;
+  }
+}
+
+.slick-slider {
+  .slick-slide {
+    outline: 0;
+  }
+  .slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+
+    .slick-active button {
+      background: $color_main;
+      opacity: 1;
+    }
+
+    button {
+      background: none;
+      font-size: 0;
+      border: 1px solid $color_main;
+      background: #fff;
+      width: 40px;
+      height: 10px;
+      opacity: 0.5;
+      margin: 0 5px;
+      transition: opacity 0.3s ease;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.sliderHome {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &__item {
+    height: 100%;
+  }
+  &__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .slick-list {
+    padding: 0 !important;
+  }
+}
+
+.productBlock {
+  text-align: center;
+
+  &__name,
+  &__price {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.grid {
+  margin-bottom: 10px;
+  &__productBlock {
+    margin-bottom: 40px;
+  }
+}
+
+.aboutHome {
+  overflow: hidden;
+  background-image: url(../img/production/about-home.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+  height: 90vh;
+  position: relative;
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: justify;
+  }
+
+  &__author em {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 300;
+    display: block;
+  }
+
+  .logo {
+    color: #ffff;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .container,
+  .row,
+  .row > div {
+    height: 100%;
+  }
+  .row {
+    align-items: center;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+.sliderDefault {
+  margin: 0 -15px;
+  &__item {
+    margin: 0 15px;
+  }
+  .slick-list {
+    padding: 0 !important;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
+$arrowHeight: 40px;
+
+.sliderContainer {
+  position: relative;
+
+  .custom-arrow {
+    width: $arrowHeight;
+    height: $arrowHeight;
+    position: absolute;
+    top: calc(50% - #{$arrowHeight / 2});
+    background: rgba($color: $color_main, $alpha: 0.7);
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba($color: $color_main, $alpha: 0.9);
+    }
+    &:active i {
+      font-size: 20px;
+    }
+  }
+  i {
+    color: #fff;
+    font-size: 25px;
+    line-height: $arrowHeight;
+  }
+  .slickNext {
+    right: -60px;
+  }
+  .slickPrev {
+    left: -60px;
+  }
+}
+
+.restaurant {
+  height: 70vh;
+  background-image: url(../img/production/restaurant/restaurant.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  &__text {
+    font-size: 30px;
+  }
+
+  &__button {
+    margin-left: 0;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  h3 {
+    text-align: left;
+  }
+
+  .row {
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .container,
+  .row {
+    height: 100%;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    background: rgba($color: #fff, $alpha: 0.7);
+  }
+}
+
+.map {
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+  .mapouter {
+    position: relative;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+  }
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+}
+
+#overlay img {
+  margin: 10% auto 0;
+  width: 550px;
+  border-radius: 5px;
+}
+
+.prefooter {
+  line-height: 3;
+}

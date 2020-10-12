@@ -85,8 +85,12 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: Helvetica;
+
+  // Custom Styles //
+  font-family: $font_main;
+  color: $color_main;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

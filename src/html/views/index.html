@@ -2,9 +2,261 @@
 <%=_.template(require('./../includes/header.html').default)(data) %>
 
 <main>
-  <div class="container">
-    welcom
-  </div>
+  <section class="sliderHome">
+    <div class="sliderHome__item">
+      <img src="img/production/banners_slider/item1.webp" alt="" />
+    </div>
+    <div class="sliderHome__item">
+      <img src="img/production/banners_slider/item2.webp" alt="" />
+    </div>
+    <div class="sliderHome__item">
+      <img src="img/production/banners_slider/item3.webp" alt="" />
+    </div>
+    <div class="sliderHome__item">
+      <img src="img/production/banners_slider/item4.webp" alt="" />
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>Categorii</h3>
+        </div>
+        <div class="col-md-4">
+          <div class="grid__productBlock productBlock">
+            <a href="category.html" class="image-container">
+              <img src="img/production/categories/cups.jpg" alt="" />
+            </a>
+            <a href="category.html" class="productBlock__name">Cups</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="grid__productBlock productBlock">
+            <a href="category.html" class="image-container">
+              <img src="img/production/categories/plates.jpg" alt="" />
+            </a>
+            <a href="category.html" class="productBlock__name">Plates</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="grid__productBlock productBlock">
+            <a href="category.html" class="image-container">
+              <img src="img/production/categories/bowls.jpg" alt="" />
+            </a>
+            <a href="category.html" class="productBlock__name">Bowls</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="grid__productBlock productBlock">
+            <a href="category.html" class="image-container">
+              <img src="img/production/categories/cups.jpg" alt="" />
+            </a>
+            <a href="category.html" class="productBlock__name">Cups</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="grid__productBlock productBlock">
+            <a href="category.html" class="image-container">
+              <img src="img/production/categories/plates.jpg" alt="" />
+            </a>
+            <a href="category.html" class="productBlock__name">Plates</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="grid__productBlock productBlock">
+            <a href="category.html" class="image-container">
+              <img src="img/production/categories/dinner.jpg" alt="" />
+            </a>
+            <a href="category.html" class="productBlock__name">Dinner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aboutHome">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="aboutHome__inner">
+            <p class="aboutHome__text">
+              "As an ceramic artist I have ever since been captivated by the
+              enjoyment of creating custom made pottery with unique decorative
+              beauty combined with functional simplicity.
+            </p>
+            <p class="aboutHome__text">
+              Organic forms capture me inspiring my hands to shape the clay into
+              its natural beauty. This is my passion and I would love to share
+              it with you."
+            </p>
+            <div class="aboutHome__author">
+              <strong class="logo">Andrei Buza</strong>
+              <em>Ceramic artist</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="topSales">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>Top Sales</h3>
+        </div>
+        <div class="col-12">
+          <div class="sliderContainer">
+            <div class="sliderDefault sliderTopSales">
+              <div class="sliderDefault__item">
+                <div class="productBlock">
+                  <div class="image-container">
+                    <img src="img/production/serveware/item1.jpg" alt="plate" />
+                  </div>
+                  <span class="productBlock__price">430 lei</span>
+                </div>
+              </div>
+              <div class="sliderDefault__item">
+                <div class="productBlock">
+                  <div class="image-container">
+                    <img src="img/production/cups/item1.jpg" alt="plate" />
+                  </div>
+                  <span class="productBlock__price">50 lei</span>
+                </div>
+              </div>
+              <div class="sliderDefault__item">
+                <div class="productBlock">
+                  <div class="image-container">
+                    <img src="img/production/bowls/item1.jpg" alt="plate" />
+                  </div>
+                  <span class="productBlock__price">220 lei</span>
+                </div>
+              </div>
+              <div class="sliderDefault__item">
+                <div class="productBlock">
+                  <div class="image-container">
+                    <img src="img/production/tableware/item1.jpg" alt="plate" />
+                  </div>
+                  <span class="productBlock__price">220 lei</span>
+                </div>
+              </div>
+            </div>
+            <div id="slickPrevTopSales" class="slickPrev custom-arrow">
+              <i class="fas fa-angle-left"></i>
+            </div>
+            <div id="slickNextTopSales" class="slickNext custom-arrow">
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <a href="tel:+37368706774" class="button">
+            <i class="fas fa-phone-alt"></i>
+            Suna Acum
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="restaurant">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="restaurant__inner">
+            <h3>Restaurants</h3>
+            <p class="restaurant__text">
+              Are you a chef, interested in my ceramics?
+            </p>
+            <a href="tel:+37368706774" class="restaurant__button button">
+              <i class="fas fa-phone-alt"></i>
+              Contact me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newProducts">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>New Sales</h3>
+        </div>
+        <div class="col-12">
+          <div class="sliderContainer">
+            <div class="sliderDefault sliderNewProducts">
+              <div class="sliderDefault__item">
+                <div class="productBlock">
+                  <div class="image-container">
+                    <img
+                      class="lightbox"
+                      src="img/production/serveware/item2.jpg"
+                      alt="plate"
+                    />
+                  </div>
+                  <span class="productBlock__price">530 lei</span>
+                </div>
+              </div>
+              <div class="sliderDefault__item">
+                <div class="productBlock">
+                  <div class="image-container">
+                    <img src="img/production/cups/item2.jpg" alt="plate" />
+                  </div>
+                  <span class="productBlock__price">150 lei</span>
+                </div>
+              </div>
+              <div class="sliderDefault__item">
+                <div class="productBlock">
+                  <div class="image-container">
+                    <img src="img/production/bowls/item2.jpg" alt="plate" />
+                  </div>
+                  <span class="productBlock__price">320 lei</span>
+                </div>
+              </div>
+              <div class="sliderDefault__item">
+                <div class="productBlock">
+                  <div class="image-container">
+                    <img src="img/production/tableware/item2.jpg" alt="plate" />
+                  </div>
+                  <span class="productBlock__price">220 lei</span>
+                </div>
+              </div>
+            </div>
+            <div id="slickPrevNew" class="slickPrev custom-arrow">
+              <i class="fas fa-angle-left"></i>
+            </div>
+            <div id="slickNextNew" class="slickNext custom-arrow">
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <a href="tel:+37368706774" class="button">
+            <i class="fas fa-phone-alt"></i>
+            Suna Acum
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map">
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=piata%20marii%20adunari%20nationale&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+        ></iframe>
+      </div>
+    </div>
+  </section>
 </main>
 
 <%= _.template(require('./../includes/modal.html').default)(data) %> <%=
