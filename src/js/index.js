@@ -1,3 +1,5 @@
+// Header & navbar & footer
+
 $(function() {
   var burger = $(".burger");
   var menuMobile = $(".menuMobile");
@@ -30,7 +32,7 @@ $(function() {
     centerMode: true,
     arrows: false,
     dots: false,
-    speed: 500,
+    speed: 1000,
   };
 
   $(".sliderHome").slick({
@@ -55,28 +57,38 @@ $(function() {
   });
 });
 
-var $overlay = $('<div id="overlay"></div>');
-var $image = $("<img>");
+// animations //
 
-//An image to overlay
-$overlay.append($image);
+(function() {
+  let header = document.getElementById("header");
 
-//Add overlay
-$("body").append($overlay);
+  window.addEventListener("scroll", scrollThrottler, false);
 
-//click the image and a scaled version of the full size image will appear
-$(".lightbox").click(function(event) {
-  event.preventDefault();
-  console.log("dd");
-  var imageLocation = $(this).attr("href");
+  let scrollTimeout;
+  function scrollThrottler() {
+    header.classList.add('isScrolling');
+    if ( !scrollTimeout ) {
+      scrollTimeout = setTimeout(function() {
+        scrollTimeout = null;
+        actualScrollHandler();
+       }, 200);
+    } 
+  }
 
-  //update overlay with the image linked in the link
-  $image.attr("src", imageLocation);
+  function actualScrollHandler() {
+    header.classList.remove('isScrolling');
+  }
 
-  //show the overlay
-  $overlay.show();
-});
+}());
 
-$("#overlay").click(function() {
-  $("#overlay").hide();
-});
+// Modal Gallery //
+
+(function() {
+  const galleryModal = document.getElementById("galleryModal");
+  
+  $(document).on('click', '.zoomImg', function () {
+    galleryModal.modal("show")
+  })
+
+}());
+
